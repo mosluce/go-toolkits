@@ -9,7 +9,7 @@ import (
 	"github.com/mosluce/go-toolkits/database"
 )
 
-func Open(config database.ConnectionConfig) (db *gorm.DB, err error) {
+func OpenDB(config database.ConnectionConfig) (db *gorm.DB, err error) {
 	db, err = gorm.Open(config.Dialect, config.URI())
 	return
 }
